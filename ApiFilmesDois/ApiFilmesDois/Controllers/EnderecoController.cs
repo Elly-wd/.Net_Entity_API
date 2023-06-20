@@ -3,10 +3,12 @@ using ApiFilmesDois.Data.Dtos;
 using ApiFilmesDois.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.JsonPatch;
+
 
 namespace ApiFilmesDois.Controllers;
 
-public class EnderecoController
+public class EnderecoController : ControllerBase
 {
     private FilmeContext _context;
     private IMapper _mapper;
@@ -24,8 +26,8 @@ public class EnderecoController
         Endereco endereco = _mapper.Map<Endereco>(enderecoDto);
         _context.Enderecos.Add(endereco);
         _context.SaveChanges();
-        return CreatedAction(nameof(RecuperaEnderecosPorId), new
-        { Id = endereco.Id }, endereco);
+        return CreatedAtAction(nameof(RecuperaEnderecosPorId), new { Id = endereco.Id }, endereco);
+        
     }
 
     [HttpGet]
@@ -41,8 +43,10 @@ public class EnderecoController
         if (endereco != null) 
         {
             ReadEnderecoDto enderecoDto = _mapper.Map<ReadEnderecoDto>(endereco);
-            return OK(enderecoDto);
+            return  Ok(endereco);
         }
+
+        return NotFound();
     }
 
     [HttpPut("{id}")]
@@ -59,7 +63,7 @@ public class EnderecoController
     }
 
     [HttpDelete("{id}")]
-    public IActionResult AtualizaEndereco(int id, [FromBody] UpdateEnderecoDto enderecoDto)
+    public IActionResult DeleteEndereco(int id, [FromBody] UpdateEnderecoDto enderecoDto)
     {
         Endereco endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
         if (endereco == null)
@@ -68,8 +72,7 @@ public class EnderecoController
         }
         _context.Remove(endereco);
         _context.SaveChanges();
+
         return NoContent();
     }
-
-
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\c-sharp\\wepAPI\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj": {}
+    "C:\\c-sharp\\wepAPI\\.Net_Entity_API\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj": {}
   },
   "projects": {
-    "C:\\c-sharp\\wepAPI\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj": {
+    "C:\\c-sharp\\wepAPI\\.Net_Entity_API\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\c-sharp\\wepAPI\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj",
+        "projectUniqueName": "C:\\c-sharp\\wepAPI\\.Net_Entity_API\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj",
         "projectName": "ApiFilmesDois",
-        "projectPath": "C:\\c-sharp\\wepAPI\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj",
+        "projectPath": "C:\\c-sharp\\wepAPI\\.Net_Entity_API\\ApiFilmesDois\\ApiFilmesDois\\ApiFilmesDois.csproj",
         "packagesPath": "C:\\Users\\bubih\\.nuget\\packages\\",
-        "outputPath": "C:\\c-sharp\\wepAPI\\ApiFilmesDois\\ApiFilmesDois\\obj\\",
+        "outputPath": "C:\\c-sharp\\wepAPI\\.Net_Entity_API\\ApiFilmesDois\\ApiFilmesDois\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bubih\\AppData\\Roaming\\NuGet\\NuGet.Config",
